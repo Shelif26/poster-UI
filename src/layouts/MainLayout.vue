@@ -38,7 +38,7 @@
         <q-list padding>
           <q-item clickable v-ripple>
             <q-item-section avatar>
-              <q-icon name="inbox"></q-icon>
+              <q-icon name="inbox" @click="login"></q-icon>
             </q-item-section>
 
             <q-item-section> Inbox </q-item-section>
@@ -149,12 +149,17 @@ export default defineComponent({
       }, 500);
     }
 
+    function login() {
+      window.location.href = '';
+    }
+
     return {
       leftDrawerOpen,
       isDarkMode: dark.isActive,
       toggleLeftDrawer,
       toggleDarkMode,
       showCustom,
+      login,
     };
   },
 });
